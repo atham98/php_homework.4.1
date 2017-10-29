@@ -6,9 +6,6 @@ try {
     $pdo = new PDO ("mysql:host=localhost;dbname=global", 'root', '');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//        $name = $_POST['name_book'];
-//        $author = $_POST['author'];
-//        $isbn = $_POST['isbn'];
 if(!empty($_POST)){
     $name = filter_input(INPUT_POST, 'name_book', FILTER_SANITIZE_STRING);
     $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
